@@ -6,7 +6,7 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 17:37:49 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/20 20:17:28 by grivault         ###   ########.fr       */
+/*   Updated: 2025/11/20 20:32:06 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,44 +15,34 @@
 
 static int	ft_charcmp(const char c, const char *set)
 {
-	size_t	y;
-	size_t	set_len;
-	int		count;
+	size_t	i;
 
-	y = 0;
-	count = 0;
-	set_len = ft_strlen(set);
-	while (y < ft_strlen(set))
+	i = 0;
+	while (set[i])
 	{
-		if (c == set[y])
-			count += 1;
-		y++;
+		if (c == set[i])
+			return (1);
+		i++;
 	}
-	if (count >= 1)
-		return (1);
 	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t			i;
-	unsigned int	start;
+	size_t	start;
+	size_t	end;
+	size_t	len;
 
-	i = 0;
-	while (s1[i])
-	{
-		if (!ft_charcmp(s1[i++], set))
-			break;
-	}
-	if (i == (ft_strlen(s1)))
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	while (s1[start] && ft_charcmp(s1[start], set))
+		start++;
+	if (s1[start] == '\0')
 		return (ft_strdup(""));
-	start = i;
-	i = ft_strlen(s1);
-	while (i > 0)
-	{
-		if (!ft_charcmp(s1[i--], set))
-			break;
-	}
-	i -= (start - 2);
-	return (ft_substr(s1, start, i));
+	end = ft_strlen(s1) - 1;
+	while (end > start && ft_charcmp(s1[end], set))
+		end--;
+	len = end - start + 1;
+	return (ft_substr(s1, start, len));
 }
