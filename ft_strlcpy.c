@@ -6,7 +6,7 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 21:54:14 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/22 06:53:58 by grivault         ###   ########.fr       */
+/*   Updated: 2025/11/23 10:03:15 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
-
 	size_t	i;
 
 	i = 0;

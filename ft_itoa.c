@@ -6,14 +6,14 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 04:26:57 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/22 05:38:19 by grivault         ###   ########.fr       */
+/*   Updated: 2025/11/23 09:59:59 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static char		*checks(int n)
+static char	*checks(int n)
 {
 	if (n == 0)
 		return (ft_strdup("0"));
@@ -37,7 +37,7 @@ static size_t	ft_intlen(int n)
 	return (i);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*result;
 	size_t	sign;

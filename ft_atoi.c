@@ -6,7 +6,7 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 19:22:16 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/22 06:52:08 by grivault         ###   ########.fr       */
+/*   Updated: 2025/11/23 09:59:13 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ static	int	ft_strlen_nbr(const char *s)
 	return (i);
 }
 
-
 static	int	ft_sign(char c)
 {
 	if (c == '-')
@@ -32,6 +31,17 @@ static	int	ft_sign(char c)
 	return (0);
 }
 
+static int	ft_skip_blanks(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n'
+		|| s[i] == '\v' || s[i] == '\f' || s[i] == '\r')
+		i++;
+	return (i);
+}
+
 int	ft_atoi(const char *nptr)
 {
 	int	unit;
@@ -39,6 +49,7 @@ int	ft_atoi(const char *nptr)
 	int	total;
 	int	sign;
 
+	nptr += ft_skip_blanks(nptr);
 	sign = 1;
 	unit = 1;
 	total = 0;
@@ -51,7 +62,7 @@ int	ft_atoi(const char *nptr)
 			sign = ft_sign(nptr[i--]);
 		else
 		{
-			total += (unit * ((nptr[i--]) - 48));
+			total += (unit * ((nptr[i]) - 48));
 			unit *= 10;
 			i--;
 		}

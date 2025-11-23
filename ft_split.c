@@ -6,7 +6,7 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 21:04:26 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/22 06:19:18 by grivault         ###   ########.fr       */
+/*   Updated: 2025/11/23 10:02:23 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,3 @@ char	**ft_split(char const *s, char c)
 	result[index] = NULL;
 	return (result);
 }
-

@@ -6,7 +6,7 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 21:47:08 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/10 20:12:02 by grivault         ###   ########.fr       */
+/*   Updated: 2025/11/23 09:49:27 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const unsigned char	*source;
 	unsigned char		*destination;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	source = (const unsigned char *)src;
 	destination = (unsigned char *)dest;
 	if (destination < source)
@@ -28,15 +30,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			destination[i] = source[i];
 			i++;
 		}
+		return (dest);
 	}
-	else 
+	i = n;
+	while (i > 0)
 	{
-		i = n;
-		while (i > 0)
-		{
-			--i;
-			destination[i] = source[i];
-		}
+		--i;
+		destination[i] = source[i];
 	}
 	return (dest);
 }

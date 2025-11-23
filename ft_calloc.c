@@ -6,7 +6,7 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 02:30:43 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/13 04:01:43 by grivault         ###   ########.fr       */
+/*   Updated: 2025/11/23 09:51:00 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,16 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-	size_t	size_alloc;
+	size_t	total_size;
 
-	size_alloc = 0;
-	if (nmemb == 0 | size == 0 | (nmemb * size > SIZE_MAX))
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	total_size = nmemb * size;
+	if (total_size / nmemb != size)
 		return (NULL);
-	ptr = malloc(nmemb * size);
+	ptr = malloc(total_size);
 	if (ptr == NULL)
 		return (NULL);
-	while (size_alloc < (size * nmemb))
-	{
-		*((int *)ptr + size_alloc++) = 0;
-	}
-    return (ptr);
+	ft_bzero(ptr, total_size);
+	return (ptr);
 }

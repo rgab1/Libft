@@ -6,7 +6,7 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 18:52:29 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/22 03:26:31 by grivault         ###   ########.fr       */
+/*   Updated: 2025/11/23 10:04:34 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 	size_t	actual_len;
 
-	
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
@@ -31,7 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub_str = (char *)malloc(sizeof(char) * (actual_len + 1));
 	if (sub_str == NULL)
 		return (NULL);
-	// Copy only the requested length (or less if string is shorter)
 	ft_memcpy(sub_str, s + start, actual_len);
 	sub_str[actual_len] = '\0';
 	return (sub_str);

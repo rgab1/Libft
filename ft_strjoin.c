@@ -6,7 +6,7 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 17:16:04 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/18 18:36:54 by grivault         ###   ########.fr       */
+/*   Updated: 2025/11/23 10:02:46 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s1_len;
 	size_t	s2_len;
 	char	*result;
-	
+
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	result = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));

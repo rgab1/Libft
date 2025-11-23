@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 02:29:58 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/23 09:57:03 by grivault         ###   ########.fr       */
+/*   Created: 2025/11/23 11:04:13 by grivault          #+#    #+#             */
+/*   Updated: 2025/11/23 11:11:16 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void    ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	i;
-	size_t	little_len;
+    t_list  *last;
 
-	little_len = ft_strlen(little);
-	if (little_len == 0)
-		return ((char *)big);
-	i = 0;
-	while (big[i] && i < len)
-	{
-		if (big[i] == little[0])
-		{
-			if (i + little_len > len)
-				return (NULL);
-			if (ft_strncmp(big + i, little, little_len) == 0)
-				return ((char *)big + i);
-		}
-		i++;
-	}
-	return (NULL);
+    if (!lst || !new)
+        return ;
+    if (*lst == NULL)
+    {
+        *lst = new;
+        return ;
+    }
+    last = ft_lstlast(*lst);
+    last->next = new;
 }
+

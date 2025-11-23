@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 02:29:58 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/23 09:57:03 by grivault         ###   ########.fr       */
+/*   Created: 2025/11/23 10:25:18 by grivault          #+#    #+#             */
+/*   Updated: 2025/11/23 10:28:05 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	i;
-	size_t	little_len;
-
-	little_len = ft_strlen(little);
-	if (little_len == 0)
-		return ((char *)big);
-	i = 0;
-	while (big[i] && i < len)
-	{
-		if (big[i] == little[0])
-		{
-			if (i + little_len > len)
-				return (NULL);
-			if (ft_strncmp(big + i, little, little_len) == 0)
-				return ((char *)big + i);
-		}
-		i++;
-	}
-	return (NULL);
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

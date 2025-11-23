@@ -6,23 +6,24 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 01:39:35 by grivault          #+#    #+#             */
-/*   Updated: 2025/11/13 04:03:40 by grivault         ###   ########.fr       */
+/*   Updated: 2025/11/23 09:33:32 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
 	while (s[i])
 	{
-		if (s[i++] == c)
-			return (s + (--i));
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i++;
 	}
-	if (s[i] == c)
-		return (s + i);
+	if ((char)c == '\0')
+		return ((char *)s + i);
 	return (NULL);
 }
