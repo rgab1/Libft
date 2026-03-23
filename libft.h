@@ -15,7 +15,6 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# define SIZE_MAX 18446744073709551615ULL
 
 typedef struct s_list
 {
