@@ -3,4 +3,5 @@
 *.out
 .*.swp
 .*.swo
+libft.a
 Test
