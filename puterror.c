@@ -1,6 +1,6 @@
 #include <libft.h>
 
-void	puterror.c(char *error_msg)
+void	puterror(char *error_msg)
 {
 	if (!error_msg)
 		return ;
