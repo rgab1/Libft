@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-static char	*checks(int n)
+static char	*int_max_min_handler(int n)
 {
 	if (n == 0)
 		return (ft_strdup("0"));
@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	size_t	sign;
 	size_t	int_len;
 
-	result = checks(n);
+	result = int_max_min_handler(n);
 	if (result)
 		return (result);
 	sign = (n < 0);

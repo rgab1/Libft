@@ -21,7 +21,13 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
     ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c \
     ft_toupper.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
     ft_putendl_fd.c ft_putnbr_fd.c free_strings.c ft_atoi_safe.c \
-    get_next_line.c ft_tablen.c puterror.c exit_error.c
+    get_next_line.c ft_tablen.c puterror.c exit_error.c \
+	ft_printf.c Printf_utils/checks.c Printf_utils/data_init.c \
+	Printf_utils/ft_putchar_data.c Printf_utils/ft_putx_data.c \
+	Printf_utils/ft_putxup_data.c \
+	Printf_utils/ft_putnbr_data.c Printf_utils/ft_putstr_data.c \
+	Printf_utils/ft_putpercent_data.c Printf_utils/ft_putptr_data.c \
+	Printf_utils/ft_putud_data.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -30,7 +36,7 @@ BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 
 BONUS_OBJS = $(BONUS:.c=.o)
 
-INCLUDES = -I .
+INCLUDES = -I . -I Printf_utils
 
 all: $(NAME)
 
