@@ -43,7 +43,7 @@ SRC = $(addprefix List/, $(SRC_LIST)) \
 
 OBJ = $(SRC:.c=.o)
 
-INCLUDES = -I . -I Print/Printf_utils
+INCLUDES = -I . -I Print/Printf_utils/.
 
 all: $(NAME)
 
