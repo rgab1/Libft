@@ -6,13 +6,13 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 03:34:35 by grivault          #+#    #+#             */
-/*   Updated: 2025/12/06 13:33:31 by grivault         ###   ########.fr       */
+/*   Updated: 2026/04/27 17:54:27 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <printf_utils.h>
 
-void	ft_putpercent_data(t_data *data)
+void	ft_putpercent_data(t_printf *data)
 {
 	write(1, "%", 1);
 	data->written_c_count++;

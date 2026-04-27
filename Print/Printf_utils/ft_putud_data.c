@@ -6,13 +6,13 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 03:28:30 by grivault          #+#    #+#             */
-/*   Updated: 2025/12/07 23:29:20 by grivault         ###   ########.fr       */
+/*   Updated: 2026/04/27 17:54:31 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <printf_utils.h>
 
-void	ft_putud_data(unsigned int ud, t_data *data)
+void	ft_putud_data(unsigned int ud, t_printf *data)
 {
 	char	*base;
 

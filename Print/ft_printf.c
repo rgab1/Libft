@@ -6,7 +6,7 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 10:23:07 by grivault          #+#    #+#             */
-/*   Updated: 2025/12/07 23:36:10 by grivault         ###   ########.fr       */
+/*   Updated: 2026/04/27 17:53:23 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-static void	conversion_choice(const char *input, t_data *data, va_list args)
+static void	conversion_choice(const char *input, t_printf *data, va_list args)
 {
 	char	conversion_char;
 
@@ -43,9 +43,9 @@ static void	conversion_choice(const char *input, t_data *data, va_list args)
 
 int	ft_printf(const char *input, ...)
 {
-	int		result;
-	t_data	*data;
-	va_list	args;
+	int			result;
+	t_printf	*data;
+	va_list		args;
 
 	data = data_init();
 	if (checks(input, data))

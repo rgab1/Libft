@@ -6,13 +6,13 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 03:19:41 by grivault          #+#    #+#             */
-/*   Updated: 2025/12/07 23:34:14 by grivault         ###   ########.fr       */
+/*   Updated: 2026/04/27 17:54:30 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <printf_utils.h>
 
-void	ft_putstr_data(char *str, t_data *data)
+void	ft_putstr_data(char *str, t_printf *data)
 {
 	size_t	len;
 

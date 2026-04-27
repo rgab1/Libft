@@ -6,13 +6,13 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 12:10:17 by grivault          #+#    #+#             */
-/*   Updated: 2025/12/06 13:06:12 by grivault         ###   ########.fr       */
+/*   Updated: 2026/04/27 17:54:32 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <printf_utils.h>
 
-void	ft_putx_data(unsigned int x, t_data *data)
+void	ft_putx_data(unsigned int x, t_printf *data)
 {
 	char	*base;
 

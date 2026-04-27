@@ -6,14 +6,14 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 11:02:09 by grivault          #+#    #+#             */
-/*   Updated: 2025/12/06 13:14:45 by grivault         ###   ########.fr       */
+/*   Updated: 2026/04/27 17:53:58 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <printf_utils.h>
 #include <stdlib.h>
 
-int	checks(const char *input, t_data *data)
+int	checks(const char *input, t_printf *data)
 {
 	if (!input || !data)
 	{

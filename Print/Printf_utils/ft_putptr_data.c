@@ -6,13 +6,13 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/06 13:16:12 by grivault          #+#    #+#             */
-/*   Updated: 2025/12/07 23:13:27 by grivault         ###   ########.fr       */
+/*   Updated: 2026/04/27 17:54:29 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <printf_utils.h>
 
-static void	ft_putul_data(unsigned long ul, t_data *data)
+static void	ft_putul_data(unsigned long ul, t_printf *data)
 {
 	char	*base;
 
@@ -23,7 +23,7 @@ static void	ft_putul_data(unsigned long ul, t_data *data)
 	write(1, base + (ul % 16), 1);
 }
 
-void	ft_putptr_data(void *ptr, t_data *data)
+void	ft_putptr_data(void *ptr, t_printf *data)
 {
 	if (!ptr)
 	{

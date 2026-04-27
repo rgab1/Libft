@@ -6,13 +6,13 @@
 /*   By: grivault <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 03:28:30 by grivault          #+#    #+#             */
-/*   Updated: 2025/12/07 23:28:37 by grivault         ###   ########.fr       */
+/*   Updated: 2026/04/27 17:54:22 by grivault         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <printf_utils.h>
 
-void	ft_putnbr_data(int nbr, t_data *data)
+void	ft_putnbr_data(int nbr, t_printf *data)
 {
 	char	*base;
 	long	nbrl;
